@@ -14,7 +14,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <600>;
+            tapping-term-ms = <800>;
             quick_tap_ms = <250>;
             require-prior-idle-ms = <0>;
             flavor = "tap-preferred";
@@ -44,7 +44,7 @@
             quick_tap_ms = <250>;
             require-prior-idle-ms = <125>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&ctrl_shift_mod>;
+            bindings = <&ctrl_shift_mod>, <&kp>;
         };
 
         hm_ca: hm_ca {
@@ -55,7 +55,7 @@
             quick_tap_ms = <250>;
             require-prior-idle-ms = <125>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&ctrl_alt_mod>;
+            bindings = <&ctrl_alt_mod>, <&kp>;
         };
     };
 
