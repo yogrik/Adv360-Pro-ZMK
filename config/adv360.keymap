@@ -23,6 +23,7 @@
             hold-trigger-on-release;
             quick-tap-ms = <250>;
             hold-trigger-key-positions = <0 1 2 3 4 6 5 20 19 18 17 16 15 14 28 46 60 61 29 47 62 48 30 31 49 63 64 50 32 33 34 51 35 36 52 67 66 65 7 8 9 10 11 12 13 21 22 23 24 25 26 27 38 39 40 41 42 43 44 45 54 55 56 57 58 59 69 70 71 72 73 74 75 37 38 53 68 69>;
+            hold-while-undecided;
         };
 
         ctrl_shift_mod: ctrl_shift_mod {
@@ -74,7 +75,7 @@
             bindings = <
 &mt F1 EQUAL  &hm F2 N1  &hm F3 N2  &mt F4 N3   &hm F5 N4   &hm F6 N5  &tog 1                                                   &mo 3      &hm F7 N6  &hm F8 N7   &hm F9 N8   &hm F10 N9  &hm F11 N0  &mt F12 MINUS
 &kp TAB       &kp Q      &kp W      &kp E       &kp R       &kp T      &none                                                    &none      &kp Y      &kp U       &kp I       &kp O       &kp P       &kp BSLH
-&kp ESC       &kp A      &kp S      &hm_ca D 0  &hm_cs F 0  &kp G      &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H      &hm_cs J 0  &hm_ca K 0  &kp L       &kp SEMI    &kp SQT
+&kp ESC       &kp A      &kp S      &hm_ca D D  &hm_cs F F  &kp G      &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H      &hm_cs J J  &hm_ca K K  &kp L       &kp SEMI    &kp SQT
 &kp LSHFT     &kp Z      &kp X      &kp C       &kp V       &kp B                           &kp HOME      &kp PG_UP                        &kp N      &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RSHFT
 &mo 2         &kp GRAVE  &kp CAPS   &kp LEFT    &kp RIGHT              &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE             &kp UP      &kp DOWN    &kp LBKT    &kp RBKT    &mo 2
             >;
