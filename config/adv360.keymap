@@ -20,10 +20,8 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-on-release;
             quick-tap-ms = <250>;
             hold-trigger-key-positions = <0 1 2 3 4 6 5 20 19 18 17 16 15 14 28 46 60 61 29 47 62 48 30 31 49 63 64 50 32 33 34 51 35 36 52 67 66 65 7 8 9 10 11 12 13 21 22 23 24 25 26 27 38 39 40 41 42 43 44 45 54 55 56 57 58 59 69 70 71 72 73 74 75 37 38 53 68 69>;
-            hold-while-undecided;
         };
 
         ctrl_shift_mod: ctrl_shift_mod {
