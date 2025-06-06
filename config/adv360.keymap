@@ -79,13 +79,6 @@
             bindings = <&sk LCTRL &sk LEFT_ALT>;
             label = "CTRL_ALT_MACRO";
         };
-
-        new_macro: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp B>;
-            label = "NEW_MACRO";
-        };
     };
 
     keymap {
@@ -94,11 +87,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&mt F1 EQUAL  &hm F2 N1  &hm F3 N2  &mt F4 N3   &hm F5 N4   &hm F6 N5  &tog 1                                                   &mo 3      &hm F7 N6  &hm F8 N7   &hm F9 N8   &hm F10 N9  &hm F11 N0  &mt F12 MINUS
-&kp TAB       &kp Q      &kp W      &kp E       &kp R       &kp T      &none                                                    &none      &kp Y      &kp U       &kp I       &kp O       &kp P       &kp BSLH
-&kp ESC       &kp A      &kp S      &hm_ca D D  &hm_cs F F  &kp G      &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H      &hm_cs J J  &hm_ca K K  &kp L       &kp SEMI    &kp SQT
-&kp LSHFT     &kp Z      &kp X      &kp C       &kp V       &kp B                           &kp HOME      &kp PG_UP                        &kp N      &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RSHFT
-&mo 2         &kp GRAVE  &kp CAPS   &kp LEFT    &kp RIGHT              &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE             &kp UP      &kp DOWN    &kp LBKT    &kp RBKT    &mo 2
+&mt F1 EQUAL  &hm F2 N1  &hm F3 N2  &mt F4 N3   &hm F5 N4          &hm F6 N5  &tog 1                                                   &mo 3      &hm F7 N6  &hm F8 N7   &hm F9 N8   &hm F10 N9  &hm F11 N0  &mt F12 MINUS
+&kp TAB       &kp Q      &kp W      &kp E       &kp R              &kp T      &none                                                    &none      &kp Y      &kp U       &kp I       &kp O       &kp P       &kp BSLH
+&kp ESC       &kp A      &kp S      &hm_ca D D  &ctrl_shift_macro  &kp G      &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H      &hm_cs J J  &hm_ca K K  &kp L       &kp SEMI    &kp SQT
+&kp LSHFT     &kp Z      &kp X      &kp C       &kp V              &kp B                           &kp HOME      &kp PG_UP                        &kp N      &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RSHFT
+&mo 2         &kp GRAVE  &kp CAPS   &kp LEFT    &kp RIGHT                     &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE             &kp UP      &kp DOWN    &kp LBKT    &kp RBKT    &mo 2
             >;
         };
 
