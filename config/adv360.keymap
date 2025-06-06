@@ -14,14 +14,13 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <800>;
+            tapping-term-ms = <1000>;
             quick_tap_ms = <250>;
             require-prior-idle-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
             quick-tap-ms = <250>;
-            hold-trigger-key-positions = <0 1 2 3 4 6 5 20 19 18 17 16 15 14 28 46 60 61 29 47 62 48 30 31 49 63 64 50 32 33 34 51 35 36 52 67 66 65 7 8 9 10 11 12 13 21 22 23 24 25 26 27 38 39 40 41 42 43 44 45 54 55 56 57 58 59 69 70 71 72 73 74 75 37 38 53 68 69>;
         };
 
         ctrl_shift_mod: ctrl_shift_mod {
@@ -44,7 +43,7 @@
             quick_tap_ms = <250>;
             require-prior-idle-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&ctrl_shift_mod>, <&kp>;
+            bindings = <&ctrl_shift_macro>, <&kp>;
 
             quick-tap-ms = <250>;
             hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75>;
@@ -62,6 +61,15 @@
 
             quick-tap-ms = <250>;
             hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75>;
+        };
+    };
+
+    macros {
+        ctrl_shift_macro: ctrl_shift_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LCTRL &sk LSHFT>;
+            label = "ctrl_shift_macro";
         };
     };
 
