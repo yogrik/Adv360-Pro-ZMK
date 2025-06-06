@@ -32,7 +32,29 @@
             #binding-cells = <0>;
             bindings = <LCTRL LALT>;
         };
-     };
+
+        hm_cs: hm_cs {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HM_CS";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick_tap_ms = <250>;
+            require-prior-idle-ms = <125>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&ctrl_shift_mod>;
+        };
+
+        hm_ca: hm_ca {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HM_CA";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick_tap_ms = <250>;
+            require-prior-idle-ms = <125>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&ctrl_alt_mod>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -40,11 +62,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&mt F1 EQUAL  &hm F2 N1  &hm F3 N2  &mt F4 N3        &hm F5 N4        &hm F6 N5  &tog 1                                                   &mo 3      &hm F7 N6  &hm F8 N7        &hm F9 N8        &hm F10 N9  &hm F11 N0  &mt F12 MINUS
-&kp TAB       &kp Q      &kp W      &kp E            &kp R            &kp T      &none                                                    &none      &kp Y      &kp U            &kp I            &kp O       &kp P       &kp BSLH
-&kp ESC       &kp A      &kp S      &hm LA(LCTRL) D  &hm LS(LCTRL) F  &kp G      &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H      &hm LS(LCTRL) J  &hm LA(LCTRL) K  &kp L       &kp SEMI    &kp SQT
-&kp LSHFT     &kp Z      &kp X      &kp C            &kp V            &kp B                           &kp HOME      &kp PG_UP                        &kp N      &kp M            &kp COMMA        &kp DOT     &kp FSLH    &kp RSHFT
-&mo 2         &kp GRAVE  &kp CAPS   &kp LEFT         &kp RIGHT                   &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE             &kp UP           &kp DOWN         &kp LBKT    &kp RBKT    &mo 2
+&mt F1 EQUAL  &hm F2 N1  &hm F3 N2  &mt F4 N3   &hm F5 N4   &hm F6 N5  &tog 1                                                   &mo 3      &hm F7 N6  &hm F8 N7   &hm F9 N8   &hm F10 N9  &hm F11 N0  &mt F12 MINUS
+&kp TAB       &kp Q      &kp W      &kp E       &kp R       &kp T      &none                                                    &none      &kp Y      &kp U       &kp I       &kp O       &kp P       &kp BSLH
+&kp ESC       &kp A      &kp S      &hm_ca D 0  &hm_cs F 0  &kp G      &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H      &hm_cs J 0  &hm_ca K 0  &kp L       &kp SEMI    &kp SQT
+&kp LSHFT     &kp Z      &kp X      &kp C       &kp V       &kp B                           &kp HOME      &kp PG_UP                        &kp N      &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RSHFT
+&mo 2         &kp GRAVE  &kp CAPS   &kp LEFT    &kp RIGHT              &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE             &kp UP      &kp DOWN    &kp LBKT    &kp RBKT    &mo 2
             >;
         };
 
