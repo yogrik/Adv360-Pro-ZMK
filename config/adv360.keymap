@@ -19,6 +19,8 @@
             require-prior-idle-ms = <125>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+
+            hold-trigger-on-release;
         };
 
         ctrl_shift_mod: ctrl_shift_mod {
