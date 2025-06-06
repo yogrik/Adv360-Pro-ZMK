@@ -21,6 +21,7 @@
             bindings = <&kp>, <&kp>;
 
             quick-tap-ms = <250>;
+            hold-trigger-key-positions = <65 70>;
         };
 
         ctrl_shift_mod: ctrl_shift_mod {
