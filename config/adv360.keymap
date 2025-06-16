@@ -14,7 +14,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <600>;
+            tapping-term-ms = <500>;
             quick_tap_ms = <250>;
             require-prior-idle-ms = <0>;
             flavor = "tap-preferred";
@@ -105,10 +105,10 @@
             display-name = "Base";
             bindings = <
 &hm F1 EQUAL  &hm F2 N1               &hm F3 N2       &hm F4 N3        &hm F5 N4        &hm F6 N5  &tog 1                                                   &mo 3      &hm F7 N6  &hm F8 N7        &hm F9 N8              &hm F10 N9           &hm F11 N0                  &hm F12 MINUS
-&kp TAB       &kp Q                   &kp W           &kp E            &kp R            &kp T      &none                                                    &none      &kp Y      &kp U            &kp I                  &kp O                &kp P                       &kp BSLH
-&kp ESC       &hm_mod LEFT_COMMAND A  &hm_mod RALT S  &hm_mod LSHFT D  &hm_mod LCTRL F  &kp G      &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H      &hm_mod RCTRL J  &hm_mod RIGHT_SHIFT K  &hm_mod RIGHT_ALT L  &hm_mod RIGHT_COMMAND SEMI  &kp SQT
+&kp TAB       &kp Q                   &kp W           &kp E            &kp R            &kp T      &kp F13                                                  &kp F15    &kp Y      &kp U            &kp I                  &kp O                &kp P                       &kp BSLH
+&kp ESC       &hm_mod LEFT_COMMAND A  &hm_mod RALT S  &hm_mod LSHFT D  &hm_mod LCTRL F  &kp G      &kp F14   &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &kp F16    &kp H      &hm_mod RCTRL J  &hm_mod RIGHT_SHIFT K  &hm_mod RIGHT_ALT L  &hm_mod RIGHT_COMMAND SEMI  &kp SQT
 &kp LSHFT     &kp Z                   &kp X           &kp C            &kp V            &kp B                           &kp HOME      &kp PG_UP                        &kp N      &kp M            &kp COMMA              &kp DOT              &kp FSLH                    &kp RSHFT
-&mo 2         &kp GRAVE               &kp CAPS        &kp LEFT         &kp RIGHT                   &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE             &kp UP           &kp DOWN               &kp LBKT             &kp RBKT                    &mo 2
+&tog 2        &kp GRAVE               &kp CAPS        &kp LEFT         &kp RIGHT                   &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE             &kp UP           &kp DOWN               &kp LBKT             &kp RBKT                    &mo 2
             >;
         };
 
