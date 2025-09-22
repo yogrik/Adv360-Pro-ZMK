@@ -5,10 +5,38 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
+#define TD_PAIR(name, tap_kc, dance_kc) \
+  name: name { \
+    compatible = "zmk,behavior-tap-dance"; \
+    #binding-cells = <0>; \
+    tapping-term-ms = <180>; \
+    bindings = <&kp tap_kc>, <&kp dance_kc>; \
+  };
+
 / {
     behaviors {
         #include "macros.dtsi"
-      #include "version.dtsi"
+        #include "version.dtsi"
+
+        TD_PAIR(td_eq_f1,  EQUAL, F1)
+        TD_PAIR(td_1_f2,   N1,    F2)
+        TD_PAIR(td_2_f3,   N2,    F3)
+        TD_PAIR(td_3_f4,   N3,    F4)
+        TD_PAIR(td_4_f5,   N4,    F5)
+        TD_PAIR(td_5_f6,   N5,    F6)
+        TD_PAIR(td_6_f7,   N6,    F7)
+        TD_PAIR(td_7_f8,   N7,    F8)
+        TD_PAIR(td_8_f9,   N8,    F9)
+        TD_PAIR(td_9_f10,  N9,    F10)
+        TD_PAIR(td_0_f11,  N0,    F11)
+        TD_PAIR(td_minus_f12, MINUS, F12)
+
+        td_alt: td_alt {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <180>;
+            bindings = <&kp LALT>, <&sk LALT>;
+        };
 
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -104,9 +132,9 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&hm F1 EQUAL  &hm F2 N1               &hm F3 N2              &hm F4 N3         &hm F5 N4               &hm F6 N5  &tog 1                                                                &mo 3                  &hm F7 N6  &hm F8 N7        &hm F9 N8             &hm F10 N9        &hm F11 N0                  &hm F12 MINUS
+&td_eq_f1  &td_1_f2  &td_2_f3  &td_3_f4  &td_4_f5  &td_5_f6  &tog 1                                                                &mo 3                  &td_6_f7  &td_7_f8  &td_8_f9  &td_9_f10  &td_0_f11  &td_minus_f12
 &kp TAB       &kp Q                   &kp W                  &kp E             &kp R                   &kp T      &kp LS(LA(LC(LG(A))))                                                 &kp LS(LA(LC(LG(C))))  &kp Y      &kp U            &kp I                 &kp O             &kp P                       &kp BSLH
-&kp ESC       &kp A                   &kp S                  &kp D             &kp F                   &kp G      &kp LS(LA(LC(LG(B))))  &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &kp LS(LA(LC(LG(D))))  &kp H      &kp J            &kp K                 &kp L             &kp SEMICOLON               &kp SQT
+&kp ESC       &kp A                   &kp S                  &kp D             &kp F                   &kp G      &kp LS(LA(LC(LG(B))))  &kp LCTRL  &td_alt      &kp LGUI   &kp RCTRL  &kp LS(LA(LC(LG(D))))  &kp H      &kp J            &kp K                 &kp L             &kp SEMICOLON               &kp SQT
 &kp LSHFT     &hm_mod LEFT_COMMAND Z  &hm_mod LALT X         &hm_mod LSHIFT C  &hm_mod LEFT_CONTROL V  &kp B                                        &kp HOME      &kp PG_UP                                    &kp N      &hm_mod RCTRL M  &hm_mod RSHIFT COMMA  &hm_mod RALT DOT  &hm_mod RIGHT_COMMAND FSLH  &kp RSHFT
 &tog 2        &kp GRAVE               &kp LS(LA(LC(LG(Z))))  &kp LEFT          &kp RIGHT                          &kp BSPC               &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE                         &kp UP           &kp DOWN              &kp LBKT          &kp RBKT                    &mo 2
             >;
